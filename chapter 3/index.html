@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VARIABLES FOR NUMBERS</title>
+    <script>
+        
+        var visitCount = localStorage.getItem("visitCount");
+    
+        
+        if (!visitCount) {
+          visitCount = 0;
+        }
+    
+    
+        visitCount++;
+ e
+        localStorage.setItem("visitCount", visitCount);
+    
+       
+        function displayVisitCount() {
+          var message = "You have visited this site " + visitCount + " times.";
+          document.getElementById("visitCountMessage").textContent = message;
+        }
+      </script>
+    </head>
+    <body onload="displayVisitCount()">
+         <h1>VARIABLES FOR NUMBERS</h1>
+    
+      <p id="visitCountMessage"></p>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
